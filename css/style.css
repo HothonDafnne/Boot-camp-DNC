@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
 
+:root {
+    --azul-dnc: #0c70f2;
+    --preto-dnc: #303030;
+    --cinza-hover:  #c9c9c9;
+    --branco-dnc: #ffffff;
+
+    --font-padrao: 'inter';
+}
+
 body {
     margin: 0px;
     padding: 0px;
+    background:linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), var(--preto-dnc);
+    background-repeat: no-repeat;
+
 }
 
 #principal {   
     width: 100%;   
     height: 100px;   
-    background-color: #303030;  
+    background-color: var(--preto-dnc);  
     display:flex;
     justify-content:space-between;
     align-items: center;
@@ -17,13 +29,13 @@ body {
 #principal div a{
     font-weight: 600;
     font-size: 20px;
-    color: #FFFFFF;
+    color: var(--branco-dnc);
     text-decoration: none;
-    font-family: 'Inter'
+    font-family:var(--font-padrao);
 }
 
 #principal div a:hover {
-    color: #cccccc;
+    color: var(--cinza-hover);
 }
 
 #menu {
@@ -36,18 +48,106 @@ body {
 
 #principal button {
     margin-right: 5%;
-    background-color: #0C70F2;
+    background-color: var(--azul-dnc);
     border: 0px;
     width: 80px;
     height: 39px;
-    font-family: 'Inter';
+    font-family: var(--font-padrao);
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    color: #FFFFFF;
+    color: var(--branco-dnc);
     box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
     cursor: pointer;
 }
 
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+ header {
+    color: var(--branco-dnc);
+    font-family: var(--font-padrao);
+ }
+
+ header h1 {
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+ }
+
+ header h2 { 
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+
+ }
+
+header .invert{
+    background-color: #000000;
+    font-weight: bold;
+    padding: 5px;
+}
+
+form {
+    color: var(--branco-dnc);
+    font-family: var(--font-padrao);
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.formgroup {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+ form input {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: none;
+    height: 35px;
+    font-size: 20px;
+    padding: 10px;
+ }
+ form label {
+    margin: 10px 0px 10px 0px;
+ }
+
+ form input::placeholder {
+    color: rgba(57, 57, 57, 0.5);
+ }
+
+ .checkbox label {
+    font-size: 20px;
+ }
+
+.checkbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+
+ input[type="checkbox"]{
+    transform: scale(1.7);
+ }
+
+ input[type="submit"]{
+    background: rgba(12, 112, 242, 0.9);
+    box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+    border-radius: 10px;
+    width: 100%;
+    height: 56px;
+    font-size: 32px;
+    color: var(--branco-dnc);
+    margin-top: 100px;
+    cursor: pointer;
+ }
